@@ -24,7 +24,7 @@ while (i < 4096) {
     i++;
 }
 
-const reads: ReadInfo[] = [{ start: 1, end: 5 }, { start: 4, end: 7 }, { start: 3, end: 5 }]
+// callbakc
 const callbakc = (value: number | string, index: number, array: (number | string)[]): any => {
     console.log(`
         value ${value},
@@ -39,9 +39,10 @@ export const myFunctionRead = (list: ReadInfo, call: (...args: any) => void) => 
 }
 
 
-
+// request example
+const reads: ReadInfo[] = [{ start: 1, end: 5 }, { start: 4, end: 7 }, { start: 3, end: 5 }]
 export const exeFunction = () => {
-    // request example
+
     for (const read of reads) {
         console.log(myFunctionRead(read, callbakc))
     }
